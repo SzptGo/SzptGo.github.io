@@ -1,0 +1,1 @@
+import{aa as r}from"./index-51cf8a1b.js";function t(){return r({url:"TbCarBrand/getList/",method:"get"})}function a(t){return r({url:"TbCarBrand",method:"post",data:t})}function n(t){return r({url:`TbCarBrand/${t}`,method:"delete"})}function e(t){return r({url:`TbCarBrand/${t.brandId}`,method:"put",data:t})}export{a,n as d,e,t as g};

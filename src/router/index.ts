@@ -115,11 +115,11 @@ export const constantRoutes: RouteRecordRaw[] = [
     },
     children: [
       {
-        path: "element-plus",
-        component: () => import("@/views/user/index.vue"),
-        name: "ElementPlus",
+        path: "list",
+        component: () => import("@/views/car/list.vue"),
+        name: "list",
         meta: {
-          title: "汽车列表",
+          title: "二手车列表",
           keepAlive: true,
           elIcon: "List"
         }

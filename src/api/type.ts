@@ -14,3 +14,5 @@ export interface Page {
   size: number
   total: number // 无用
 }
+
+export type ResponsePage<T> = Responce<PageRecordData<T>>

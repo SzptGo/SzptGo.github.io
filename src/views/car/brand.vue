@@ -5,7 +5,6 @@ import { CirclePlus, RefreshRight } from "@element-plus/icons-vue"
 import * as BrandApi from "@/api/car/brand"
 import * as CountryApi from "@/api/car/country"
 import { IBrand, ICountry } from "@/api/car/types"
-import { count } from "console"
 
 defineOptions({
   name: "ElementPlus"

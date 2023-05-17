@@ -18,10 +18,10 @@ export interface IUser {
   createDate: string
   updateDate: string
   level: number
-  balance: number
+  balance?: number
   avatar: string
-  mail: string
-  message: string
+  mail?: string
+  message?: string
   token: null | string
 }
 

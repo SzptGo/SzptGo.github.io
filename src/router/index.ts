@@ -233,6 +233,7 @@ export const constantRoutes: RouteRecordRaw[] = [
  * 必须带有 Name 属性
  */
 export const asyncRoutes: RouteRecordRaw[] = [
+  /*
   {
     path: "/permission",
     component: Layout,
@@ -264,6 +265,7 @@ export const asyncRoutes: RouteRecordRaw[] = [
       }
     ]
   },
+  */
   {
     path: "/:pathMatch(.*)*", // Must put the 'ErrorPage' route at the end, 必须将 'ErrorPage' 路由放在最后
     redirect: "/404",

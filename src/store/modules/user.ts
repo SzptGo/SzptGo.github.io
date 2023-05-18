@@ -9,6 +9,7 @@ import { loginApi, getUserInfoApi } from "@/api/login"
 import { IUser, type ILoginRequestData } from "@/api/login/types/login"
 import { type RouteRecordRaw } from "vue-router"
 import asyncRouteSettings from "@/config/async-route"
+import { ElMessage } from "element-plus"
 
 export const useUserStore = defineStore("user", () => {
   const token = ref<string>(getToken() || "")
@@ -17,6 +18,8 @@ export const useUserStore = defineStore("user", () => {
   const userInfo = ref<IUser>()
   const permissionStore = usePermissionStore()
   const tagsViewStore = useTagsViewStore()
+
+  const ADMIN_USER = "1"
 
   /** 设置角色数组 */
   const setRoles = (value: string[]) => {
@@ -31,8 +34,13 @@ export const useUserStore = defineStore("user", () => {
         // code: loginData.code
       })
         .then((res) => {
+          if (res.data.roleId !== ADMIN_USER) {
+            ElMessage.error("您的账户权限不足")
+            throw Error("权限不足")
+          }
           setToken(res.data.token)
           token.value = res.data.token
+          userInfo.value = res.data
           resolve(true)
         })
         .catch((error) => {
@@ -49,8 +57,10 @@ export const useUserStore = defineStore("user", () => {
           userInfo.value = res.data
           username.value = data.name
           // 验证返回的 roles 是否是一个非空数组
-          if (data.roles && data.roles.length > 0) {
-            roles.value = data.roles
+          const rolesList = ["normal"]
+          if (data.roleId === ADMIN_USER) rolesList.push("admin")
+          if (rolesList) {
+            roles.value = rolesList
           } else {
             // 塞入一个没有任何作用的默认角色，不然路由守卫逻辑会无限循环
             roles.value = asyncRouteSettings.defaultRoles

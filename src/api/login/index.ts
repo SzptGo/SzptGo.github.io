@@ -1,11 +1,11 @@
 import { request } from "@/utils/service"
 import type * as Login from "./types/login"
-import { Responce } from "../type"
+import { Responce, ResponsePage } from "../type"
 
 /** 获取登录验证码 */
 export function getLoginCodeApi() {
   return request<Login.LoginCodeResponseData>({
-    url: "login/code",
+    url: "/verifyCode/code",
     method: "get"
   })
 }
@@ -27,9 +27,9 @@ export function getUserInfoApi() {
   })
 }
 
-export function geUserList(current = 1, size = 100000, total = 100000) {
-  return request<Responce<Login.IUser[]>>({
-    url: `TbUser/getList/${current}/${size}/${total}`,
+export function geUserList(current = 1, size = 100000) {
+  return request<ResponsePage<Login.IUser>>({
+    url: `TbUser/getList/${current}/${size}`,
     method: "get"
   })
 }
@@ -45,6 +45,22 @@ export function registerUser(user: Login.ILoginRequestData) {
   return request<Responce<Login.IUser[]>>({
     url: `TbUser/register`,
     method: "post",
+    data: user
+  })
+}
+
+export function addUser(user: Login.IUser) {
+  return request<Responce<boolean>>({
+    url: `TbUser`,
+    method: "post",
+    data: user
+  })
+}
+
+export function editUser(user: Login.IUser) {
+  return request<Responce<boolean>>({
+    url: `TbUser/${user.id}`,
+    method: "put",
     data: user
   })
 }

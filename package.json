@@ -1,15 +1,15 @@
 {
-  "name": "v3-admin-vite",
+  "name": "szpt-go-admin",
   "version": "3.4.0-beta",
-  "description": "一个免费开源的中后台管理系统基础解决方案，基于 Vue3、TypeScript、Element Plus、Pinia 和 Vite 等主流技术.",
+  "description": "毕设项目 admin 端",
   "author": {
-    "name": "pany",
-    "email": "939630029@qq.com",
-    "url": "https://github.com/pany-ang"
+    "name": "Josh Lind",
+    "email": "893957231@qq.com",
+    "url": "https://github.com/SzptGo"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/un-pany/v3-admin-vite.git"
+    "url": "https://github.com/SzptGo/SzptGo.github.io"
   },
   "scripts": {
     "dev": "vite",

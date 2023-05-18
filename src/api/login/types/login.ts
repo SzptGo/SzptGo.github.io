@@ -10,19 +10,19 @@ export interface ILoginRequestData {
 }
 
 export interface IUser {
-  id: string
+  id?: string
   name: string
   phone: string
   roleId: string
-  addrId: string
-  createDate: string
-  updateDate: string
-  level: number
+  addrId?: string
+  createDate?: string
+  updateDate?: string
+  level?: number
   balance?: number
   avatar: string
   mail?: string
   message?: string
-  token: null | string
+  token?: null | string
 }
 
 export type LoginCodeResponseData = Responce<string>

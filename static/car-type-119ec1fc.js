@@ -1,0 +1,1 @@
+import{aa as t}from"./index-370541b8.js";function e(e=1,r=9999){return t({url:`TbCarType/getList/${e}/${r}`,method:"get"})}function r(e){return t({url:"TbCarType",method:"post",data:e})}function a(e){return t({url:`TbCarType/${e}`,method:"delete"})}function n(e){return t({url:`TbCarType/${e.typeId}`,method:"put",data:e})}export{r as a,a as d,n as e,e as g};

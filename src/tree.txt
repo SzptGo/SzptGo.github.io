@@ -1,0 +1,226 @@
+.
+├── App.vue
+├── api
+│   ├── car
+│   │   ├── brand.ts
+│   │   ├── car-type.ts
+│   │   ├── country.ts
+│   │   ├── post.ts
+│   │   ├── power-type.ts
+│   │   ├── series.ts
+│   │   └── types
+│   │       └── index.ts
+│   ├── category
+│   │   ├── index.ts
+│   │   └── types
+│   │       └── category.ts
+│   ├── goods
+│   │   ├── index.ts
+│   │   └── types
+│   │       └── goods.ts
+│   ├── hook-demo
+│   │   ├── use-fetch-select.ts
+│   │   └── use-fullscreen-loading.ts
+│   ├── login
+│   │   ├── index.ts
+│   │   └── types
+│   │       └── login.ts
+│   ├── order
+│   │   ├── index.ts
+│   │   └── types
+│   │       └── order.ts
+│   ├── rate
+│   │   ├── index.ts
+│   │   └── types
+│   │       └── rate.ts
+│   ├── table
+│   │   ├── index.ts
+│   │   └── types
+│   │       └── table.ts
+│   └── type.ts
+├── assets
+│   ├── docs
+│   │   ├── preview1.png
+│   │   ├── preview2.png
+│   │   └── preview3.png
+│   ├── error-page
+│   │   ├── 403.svg
+│   │   └── 404.svg
+│   └── layout
+│       ├── logo-text-1.png
+│       ├── logo-text-2.png
+│       └── logo.png
+├── components
+│   ├── Notify
+│   │   ├── NotifyList.vue
+│   │   ├── data.ts
+│   │   └── index.vue
+│   ├── Screenfull
+│   │   └── index.vue
+│   ├── SvgIcon
+│   │   └── index.vue
+│   └── ThemeSwitch
+│       └── index.vue
+├── config
+│   ├── async-route.ts
+│   ├── layout.ts
+│   └── white-list.ts
+├── constants
+│   └── cacheKey.ts
+├── directives
+│   ├── index.ts
+│   └── permission
+│       └── index.ts
+├── hooks
+│   ├── useFetchSelect.ts
+│   ├── useFullscreenLoading.ts
+│   ├── usePagination.ts
+│   └── useTheme.ts
+├── icons
+│   ├── index.ts
+│   └── svg
+│       ├── 4-汽车型号.svg
+│       ├── 4-汽车系列.svg
+│       ├── 404.svg
+│       ├── brand.svg
+│       ├── bug.svg
+│       ├── car.svg
+│       ├── comment.svg
+│       ├── component.svg
+│       ├── dashboard.svg
+│       ├── fullscreen-exit.svg
+│       ├── fullscreen.svg
+│       ├── globe-asia.svg
+│       ├── link.svg
+│       ├── lock.svg
+│       ├── menu.svg
+│       ├── order.svg
+│       ├── power.svg
+│       └── unocss.svg
+├── layout
+│   ├── components
+│   │   ├── AppMain.vue
+│   │   ├── Breadcrumb
+│   │   │   └── index.vue
+│   │   ├── Hamburger
+│   │   │   └── index.vue
+│   │   ├── NavigationBar
+│   │   │   └── index.vue
+│   │   ├── RightPanel
+│   │   │   └── index.vue
+│   │   ├── Settings
+│   │   │   └── index.vue
+│   │   ├── Sidebar
+│   │   │   ├── SidebarItem.vue
+│   │   │   ├── SidebarItemLink.vue
+│   │   │   ├── SidebarLogo.vue
+│   │   │   └── index.vue
+│   │   ├── TagsView
+│   │   │   ├── ScrollPane.vue
+│   │   │   └── index.vue
+│   │   └── index.ts
+│   ├── hooks
+│   │   └── useResize.ts
+│   └── index.vue
+├── main.ts
+├── plugins
+│   ├── element-plus
+│   │   └── index.ts
+│   ├── element-plus-icon
+│   │   └── index.ts
+│   ├── index.ts
+│   └── vxe-table
+│       └── index.ts
+├── router
+│   ├── index.ts
+│   └── permission.ts
+├── store
+│   ├── index.ts
+│   └── modules
+│       ├── app.ts
+│       ├── permission.ts
+│       ├── settings.ts
+│       ├── tags-view.ts
+│       └── user.ts
+├── styles
+│   ├── element-plus.scss
+│   ├── index.scss
+│   ├── mixins.scss
+│   ├── theme
+│   │   ├── core
+│   │   │   ├── element-plus.scss
+│   │   │   ├── error-page.scss
+│   │   │   ├── index.scss
+│   │   │   ├── layout.scss
+│   │   │   ├── login.scss
+│   │   │   ├── other.scss
+│   │   │   └── vxe-table.scss
+│   │   ├── dark
+│   │   │   ├── index.scss
+│   │   │   └── variables.scss
+│   │   ├── dark-blue
+│   │   │   ├── element-plus.css
+│   │   │   ├── element-plus.scss
+│   │   │   ├── index.scss
+│   │   │   └── variables.scss
+│   │   └── register.scss
+│   ├── transition.scss
+│   ├── variables.css
+│   └── vxe-table.scss
+├── tree.txt
+├── utils
+│   ├── cache
+│   │   ├── cookies.ts
+│   │   └── localStorage.ts
+│   ├── category.ts
+│   ├── image.ts
+│   ├── index.ts
+│   ├── permission.ts
+│   ├── service.ts
+│   └── validate.ts
+└── views
+    ├── car
+    │   ├── brand.vue
+    │   ├── car-type.vue
+    │   ├── country.vue
+    │   ├── list.vue
+    │   ├── power-type.vue
+    │   └── series.vue
+    ├── dashboard
+    │   ├── admin
+    │   │   └── index.vue
+    │   ├── editor
+    │   │   └── index.vue
+    │   └── index.vue
+    ├── error-page
+    │   ├── 403.vue
+    │   ├── 404.vue
+    │   └── components
+    │       └── ErrorPageLayout.vue
+    ├── hook-demo
+    │   ├── use-fetch-select.vue
+    │   └── use-fullscreen-loading.vue
+    ├── login
+    │   └── index.vue
+    ├── order
+    │   ├── components
+    │   │   └── order-status-tag.vue
+    │   ├── list.vue
+    │   └── rate-list.vue
+    ├── permission
+    │   ├── components
+    │   │   └── SwitchRoles.vue
+    │   ├── directive.vue
+    │   └── page.vue
+    ├── product
+    │   ├── add.vue
+    │   ├── index.vue
+    │   └── sku.vue
+    ├── product-category
+    │   └── index.vue
+    ├── redirect
+    │   └── index.vue
+    └── user
+        └── index.vue
+
+73 directories, 150 files

@@ -15,7 +15,7 @@ export function addGoods(goods: Goods.IGoods) {
 
 export function editGoods(goods: Goods.IGoods) {
   return request<Responce<boolean>>({
-    url: "TbGood",
+    url: `TbGood/${goods.id}`,
     method: "put",
     data: goods
   })
